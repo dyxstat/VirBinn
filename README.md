@@ -81,7 +81,7 @@ Once the environment is set up, you can run VirBinn. The pipeline is designed as
 
 You can view the overall workflow of VirBinn below:
 
-![VirBinn Workflow Overview](image/overview.pdf)
+![VirBinn Workflow Overview](image/overview.png)
 
 ## Data Preparation
 Before starting the pipeline, ensure your input data meets the following criteria:
