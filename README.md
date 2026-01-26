@@ -151,4 +151,4 @@ Upon completion, the `OUTDIR` will contain several key files:
 | **`[PREFIX]_clusters.txt`** | A tab-delimited file mapping each viral contig to its assigned bin ID. |
 | **`contig_info.csv`** | Summary metrics (site count, contig length) for all contigs. |
 | **`viral_contig_info.csv`** | Summary metrics specifically for viral contigs. |
-| **`VirBinn.log`** | Detailed runtime logs for troubleshooting. |
+| **`VirBinn.log`** | Detailed runtime logs. |
