@@ -11,7 +11,7 @@ from Script.utils import gen_bins
 logger = logging.getLogger(__name__)
 
 # build graph and cluster by silhouette-driven Leiden
-def bin(fasta, path, precompute = False, output_prefix = 'viral2bin'):
+def bin(fasta, path, precompute = False, output_prefix = 'virbinn'):
     combined = scisp.load_npz(os.path.join(path, "tmp", 'combined.npz'))
     viral_ci = pd.read_csv(os.path.join(path, 'viral_contig_info.csv'), header=0).values
     
