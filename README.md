@@ -140,7 +140,7 @@ python virbinn.py bin [OPTIONS] FASTA_FILE OUTDIR
 * `OUTDIR`: The output directory (must be the same directory used in Step 1 & 2).
 
 **Optional Parameters:**
-* `--output-prefix`: A string prefix for the resulting cluster files (default: `viral2bin`).
+* `--output-prefix`: A string prefix for the resulting cluster files (default: `virbinn`).
 
 ## Output Files
 Upon completion, the `OUTDIR` will contain several key files:
