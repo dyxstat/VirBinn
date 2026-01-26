@@ -58,11 +58,11 @@ conda activate virbinn_env
 We provide a built-in test command to verify that VirBinn is correctly installed and that all library dependencies are loaded properly.
 
 ```bash
-python virbinn.py test --OUTDIR Test/check_install
+python virbinn.py test 
 ```
 
-* **Success:** The command will run silently and exit without errors. A directory named `Test/check_install` containing a log file will be created.
-* **Failure:** If the environment is not set up correctly, Python will raise an `ImportError` or `ModuleNotFoundError`.
+* **Success:** The command will run silently and exit without errors. A directory named `Test/out_test` containing a log file will be created.
+* **Failure:** If the environment is not set up correctly, Python will raise an error.
 
 ## Demo Data
 To help you get started quickly, the `Test/` directory includes a small simulated dataset:
