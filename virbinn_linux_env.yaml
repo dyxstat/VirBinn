@@ -1,4 +1,4 @@
-name: VirBinn_env
+name: virbinn_env
 channels:
   - bioconda
   - conda-forge
