@@ -107,7 +107,7 @@ python virbinn.py raw [OPTIONS] FASTA_FILE BAM_FILE OUTDIR
 * `FASTA_FILE`: Path to the reference assembly.
 * `BAM_FILE`: Path to the **name-sorted** Hi-C BAM file.
 * `OUTDIR`: Directory for outputting intermediate matrices.
-* `-e, --enzyme`: The restriction enzyme used in your Hi-C library (e.g., `-e HindIII`). *Note: This flag can be used multiple times for multi-enzyme cocktails.*
+* `-e, --enzyme`: The restriction enzyme used in the Hi-C library.
 
 **Optional Parameters:**
 * `--min-len`: Filter out contigs shorter than this threshold (default: 1000).
