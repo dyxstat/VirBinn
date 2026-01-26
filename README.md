@@ -38,7 +38,7 @@ We provide configuration files for Linux and macOS to install the packages.
 
 **For Linux Users:**
 ```bash
-conda env create -f virbinn_env.yaml
+conda env create -f virbinn_linux_env.yaml
 ```
 
 **For macOS Users:**
