@@ -115,7 +115,6 @@ if __name__ == '__main__':
         sys.exit(0)
 
     try:
-        # FIXED: Forced 'True' here so it always covers/accepts existing directories
         make_dir(args.OUTDIR, True) 
     except IOError:
         print('Error: cannot find out directory or the directory already exists')
@@ -125,10 +124,6 @@ if __name__ == '__main__':
     temp_folder = os.path.join(args.OUTDIR , 'tmp')
     if not os.path.exists(temp_folder):
         os.mkdir(temp_folder)
-    # FIXED: Commented out the deletion logic below so Step 3 can find Step 2's files
-    # else:
-    #    shutil.rmtree(temp_folder)            
-    #    os.mkdir(temp_folder)
             
     logging.captureWarnings(True)
     logger = logging.getLogger('main')
