@@ -146,7 +146,7 @@ python virbinn.py bin [OPTIONS] FASTA_FILE OUTDIR
 ## Output Files
 Upon completion, the `OUTDIR` will contain several key files:
 
-| File / Folder | Description |
+| Folder / File | Description |
 | :--- | :--- |
 | **`[PREFIX]_VIRAL_BIN/`** | A directory containing individual FASTA files for each recovered viral bin. |
 | **`[PREFIX]_clusters.txt`** | Mapping of each viral contig to its assigned bin. |
