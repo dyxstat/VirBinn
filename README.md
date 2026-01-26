@@ -66,6 +66,7 @@ python virbinn.py test
 
 ## Demo Data
 To help you get started quickly, the `Test/` directory includes a small simulated dataset:
+
 ```
 Test/final.contigs.fa
 Test/MAP_SORTED.bam
@@ -90,7 +91,7 @@ Before starting the pipeline, ensure your input data meets the following criteri
 3.  **Hi-C Alignment (BAM):** Hi-C reads aligned to your assembly. The BAM file must be sorted by query name to ensure paired-end reads are processed correctly.
 
 ```bash
-# Sort your alignment file by name using samtools
+# Sort the alignment file by name using samtools
 samtools sort -n -o sorted_by_name.bam coordinate_sorted.bam
 ```
 
