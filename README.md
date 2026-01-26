@@ -29,7 +29,7 @@ To ensure all C-based dependencies (such as `pysam` and `leidenalg`) interact co
 Clone the repository using git:
 
 ```bash
-git clone https://github.com/yourusername/VirBinn.git
+git clone https://github.com/dyxstat/VirBinn.git
 cd VirBinn
 ```
 
