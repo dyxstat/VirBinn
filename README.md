@@ -148,7 +148,7 @@ Upon completion, the `OUTDIR` will contain several key files:
 | File / Folder | Description |
 | :--- | :--- |
 | **`[PREFIX]_VIRAL_BIN/`** | A directory containing individual FASTA files for each recovered viral bin. |
-| **`[PREFIX]_clusters.txt`** | A tab-delimited file mapping each viral contig to its assigned bin ID. |
+| **`[PREFIX]_clusters.txt`** | Mapping of each viral contig to its assigned bin. |
 | **`contig_info.csv`** | Summary metrics (site count, contig length) for all contigs. |
 | **`viral_contig_info.csv`** | Summary metrics specifically for viral contigs. |
 | **`VirBinn.log`** | Detailed runtime logs. |
