@@ -59,7 +59,7 @@ if __name__ == '__main__':
        
     cmd_impute = subparsers.add_parser('impute', parents=[global_parser],
                                       description='Do the imputation.')
-                                   
+                                    
     cmd_cl = subparsers.add_parser('bin', parents=[global_parser],
                                       description='Do the binning.')
 
@@ -83,7 +83,7 @@ if __name__ == '__main__':
     cmd_raw.add_argument('BAM', help='Input bam file in query order')
     cmd_raw.add_argument('OUTDIR', help='Output directory')
     
-         
+          
     '''
     Do the imputation
     '''
@@ -97,7 +97,7 @@ if __name__ == '__main__':
     Clutering subsparser input
     '''
     cmd_cl.add_argument('--precompute', default=False, action='store_true', help='use precomputed matrix to compute score')
-    cmd_cl.add_argument('--output-prefix', type=str, default='viral2bin',
+    cmd_cl.add_argument('--output-prefix', type=str, default='virbinn',
                                help='output prefix')
     cmd_cl.add_argument('FASTA', help='Reference fasta sequence')
     cmd_cl.add_argument('OUTDIR', help='Output directory of sub bins')
@@ -115,7 +115,8 @@ if __name__ == '__main__':
         sys.exit(0)
 
     try:
-        make_dir(args.OUTDIR, args.cover)
+        # FIXED: Forced 'True' here so it always covers/accepts existing directories
+        make_dir(args.OUTDIR, True) 
     except IOError:
         print('Error: cannot find out directory or the directory already exists')
         sys.exit(1)
@@ -124,10 +125,11 @@ if __name__ == '__main__':
     temp_folder = os.path.join(args.OUTDIR , 'tmp')
     if not os.path.exists(temp_folder):
         os.mkdir(temp_folder)
-    else:
-        shutil.rmtree(temp_folder)           
-        os.mkdir(temp_folder)
-           
+    # FIXED: Commented out the deletion logic below so Step 3 can find Step 2's files
+    # else:
+    #    shutil.rmtree(temp_folder)            
+    #    os.mkdir(temp_folder)
+            
     logging.captureWarnings(True)
     logger = logging.getLogger('main')
 
@@ -192,12 +194,8 @@ if __name__ == '__main__':
             bin(args.FASTA, 
                 args.OUTDIR, 
                 precompute = args.precompute, 
-                output_prefix = 'viral2bin')
-            
-            bin(fasta=args.FASTA,
-                       cluster_file=args.cluster_input,
-                       output_prefix=args.output_prefix,
-                       outdir=args.OUTDIR)
+                output_prefix = args.output_prefix)
+
             logger.info('Binning stage finished')
 
 
